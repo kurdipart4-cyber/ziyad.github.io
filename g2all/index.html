@@ -28,8 +28,18 @@ if (!isPS4) {
             window.location.replace("cache900.html");
         } else if (fwNum >= 10.00 && fwNum <= 11.02) {
             window.location.replace("cachecss.html");
-        } else if (fwNum >= 11.50 && fwNum <= 13.00) {
-            window.location.replace("cacheslopkit.html");
+        } else if (fwNum >= 11.50 && fwNum <= 12.02) {
+            var script = document.createElement('script');
+            script.type = 'module';
+            script.src = 'slopkit/chain_lapse.js';
+            script.onerror = onScriptError;
+            document.head.appendChild(script);
+        } else if (fwNum >= 12.50 && fwNum <= 13.00) {
+            var script = document.createElement('script');
+            script.type = 'module';
+            script.src = 'slopkit/chain_poops.js';
+            script.onerror = onScriptError;
+            document.head.appendChild(script);
         } else {
             document.addEventListener("DOMContentLoaded", () => {
                 msgs.innerHTML = "Firmware not Supported! (" + fwVersion + ")";
@@ -38,5 +48,7 @@ if (!isPS4) {
     }
 }
 </script>
+<h1 id=msgs style="font-size: 30px;margin-top: 77px;margin-bottom: 455px;">Loading GoldHEN v2.4b18.10... Please Wait</h1>
+<h1 style="margin-top: 43px;">Special Thanks to: <a href="https://twitter.com/_AlAzif" style="color: #f31414;margin-left: 10px;margin-right: 10px;">@_AlAzif</a><a href="https://x.com/Kameleonre_" style="color: #f31414;margin-left: 10px;margin-right: 10px;">@Kameleonre</a><a href="https://x.com/sheladze_" style="color: #f31414;margin-left: 10px;margin-right: 10px;">@sheladze</a>SISTRO Abc</h1>
 </body>
 </html>
